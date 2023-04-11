@@ -74,8 +74,8 @@ public class OtherPortalsUtils extends DriverAction {
      * @since 23rd Feb, 2023
      */
     public static void clickIfVisible(By elemLocator, String title) {
-        waitUntilElementAppear(elemLocator, 5);
-        if (OtherPortalsUtils.isElementClickable(elemLocator, 5)) {
+        waitUntilElementAppear(elemLocator, 10);
+        if (OtherPortalsUtils.isElementClickable(elemLocator, 10)) {
             click(elemLocator);
         } else
             GemTestReporter.addTestStep(title, "Click action is not performed", STATUS.FAIL, takeSnapShot());
