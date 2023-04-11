@@ -9,7 +9,7 @@ Feature: Gembook -> News Feed -> Awards
     When User navigates to tab "News Feeds"
 
 
-  @demo123987
+  @demo123987  @Test001
   Scenario Outline: Gembook_Awards_ScrollThroughListOfWinnersIn<desiredYear>
     Given Check if Award section is present in News Feeds
     When User selects "<desiredYear>" and "<desiredEvent>" from award section
@@ -20,7 +20,7 @@ Feature: Gembook -> News Feed -> Awards
       | 2022        | Rising Star Award |
 
 
-  @demo123987
+  @demo123987  @Test001
   Scenario Outline: Gembook_OtherPortals_NavigationToNewPageOnClicking<desiredPage>
     Given Check if Other Portals is present in side bar
     When Check if all sub items are present
