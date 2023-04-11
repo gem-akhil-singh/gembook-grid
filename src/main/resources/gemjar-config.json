@@ -2,7 +2,7 @@
   "environment": "Prod",
   "project_name": "GEMBOOK",
   "glueCode": "com.qa.gembook",
-  "tags": "@Test001",
+  "tags": "@TestGoogle",
   "email_report": "y",
   "email_to": "akhil.rajput@geminisolutions.com",
   "report_name": "GembookTestReport",
@@ -10,7 +10,7 @@
   "jewel_user": "akhilsingh",
   "jewel_bridge_token": "13a86f1b-ca6d-477a-8532-b3bb674264a01675112104492",
   "enter_point": "https://apis.gemecosystem.com/enter-point",
-  "tagName": "@Test001",
+  "tagName": "@TestGoogle",
   "remoteDriverUrl" : "https://selenium-hub.geminisolutions.com/",
   "prod": {
     "browserName": "grid",

@@ -3,10 +3,13 @@ package com.qa.gembook.StepDefinition;
 import com.gemini.generic.reporting.GemTestReporter;
 import com.gemini.generic.reporting.STATUS;
 import com.gemini.generic.ui.utils.DriverAction;
+import com.gemini.generic.ui.utils.DriverManager;
 import com.qa.gembook.GembookUtilities.OtherPortalsUtils;
 import com.qa.gembook.Locators.SideBar_Locators;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 public class OtherPortals extends DriverAction {
 
@@ -85,5 +88,21 @@ public class OtherPortals extends DriverAction {
             GemTestReporter.addTestStep("Verify the url displayed at the bottom of screen", "URL matched. Expected url: " + urlOfItem, STATUS.PASS, takeSnapShot());
         } else
             GemTestReporter.addTestStep("Verify the url displayed at the bottom of scree", "Url not match. Expected url :" + urlOfItem + " and observed:" + urlUI, STATUS.FAIL, takeSnapShot());
+    }
+
+    @When("User Navigates to {string}")
+    public void userNavigatesTo(String arg0) {
+        DriverManager.getWebDriver().navigate().to(arg0);
+        GemTestReporter.addTestStep("Navigate to Google","User Naviagte to Google",STATUS.PASS,takeSnapShot());
+    }
+
+    @Then("Verify Google is loaded")
+    public void verifyGoogleIsLoaded() {
+
+        String title= DriverManager.getWebDriver().getTitle();
+        Assert.assertEquals(title,"Google");
+
+        GemTestReporter.addTestStep("Verify Google is loaded","User Check the Title ",STATUS.PASS,takeSnapShot());
+
     }
 }

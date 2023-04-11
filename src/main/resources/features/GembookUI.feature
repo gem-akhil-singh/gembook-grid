@@ -58,3 +58,8 @@ Feature: Gembook -> News Feed -> Awards
     Then Click on Add new "Skills"
     And Save added "Skills" information
     Then Verify if "Skills" data is updated
+
+  @TestGoogle
+  Scenario: Open Google and Verify
+    When User Navigates to "https://www.google.com/"
+    Then Verify Google is loaded
