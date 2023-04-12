@@ -20,7 +20,7 @@ Feature: Gembook -> News Feed -> Awards
       | 2022        | Rising Star Award |
 
 
-  @demo123987  @Test001
+  @demo123987  @Test001 @TestGoogle
   Scenario Outline: Gembook_OtherPortals_NavigationToNewPageOnClicking<desiredPage>
     Given Check if Other Portals is present in side bar
     When Check if all sub items are present

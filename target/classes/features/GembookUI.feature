@@ -20,7 +20,7 @@ Feature: Gembook -> News Feed -> Awards
       | 2022        | Rising Star Award |
 
 
-  @demo123987  @Test001
+  @demo123987  @Test001 @TestGoogle
   Scenario Outline: Gembook_OtherPortals_NavigationToNewPageOnClicking<desiredPage>
     Given Check if Other Portals is present in side bar
     When Check if all sub items are present
@@ -58,3 +58,8 @@ Feature: Gembook -> News Feed -> Awards
     Then Click on Add new "Skills"
     And Save added "Skills" information
     Then Verify if "Skills" data is updated
+
+  @TestGoogle
+  Scenario: Open Google and Verify
+    When User Navigates to "https://www.google.com/"
+    Then Verify Google is loaded
