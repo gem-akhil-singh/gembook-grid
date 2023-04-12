@@ -108,12 +108,12 @@ public class GembookUtils extends DriverAction {
      * @author Rahul tagra
      * @since 17th Feb,2023
      */
-    public static String readProperties(String property) throws IOException { // Function to read Data from Properties File
-        FileReader read = new FileReader("src/main/resources/config.properties");
-        Properties credential = new Properties();
-        credential.load(read);
-        return credential.getProperty(property);
-    }
+//    public static String readProperties(String property) throws IOException { // Function to read Data from Properties File
+////        FileReader read = new FileReader("src/main/resources/config.properties");
+////        Properties credential = new Properties();
+////        credential.load(read);
+////        return credential.getProperty(property);
+//    }
 
     /**
      * @author Deeksha Singh
@@ -225,7 +225,7 @@ public class GembookUtils extends DriverAction {
     public void userEntersGitHub(String credentialType) throws IOException {
         if (credentialType.contains("GitHubUserName")) {
             click(Login_Locators.credentials(credentialType));
-            typeText(Login_Locators.credentials(credentialType), readProperties(credentialType)); //enter GitHub username
+            typeText(Login_Locators.credentials(credentialType), "abc"); //enter GitHub username
         }
         if (credentialType.contains("GitHubPassword")) {
             click(Login_Locators.credentials(credentialType));
