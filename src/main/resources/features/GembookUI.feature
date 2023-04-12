@@ -1,12 +1,12 @@
 Feature: Gembook -> News Feed -> Awards
 
-#  Background: User Login into the Gembook Application
-#    When User clicks on signIn Button
-#    Then User enters the "username"
-#    Then User enters the "password"
-#    And User logins into the application
-#    Then Verify user is logged into the application or not
-#    When User navigates to tab "News Feeds"
+  Background: User Login into the Gembook Application
+    When User clicks on signIn Button
+    Then User enters the "username"
+    Then User enters the "password"
+    And User logins into the application
+    Then Verify user is logged into the application or not
+    When User navigates to tab "News Feeds"
 
 
     Scenario: Login Test
@@ -28,6 +28,12 @@ Feature: Gembook -> News Feed -> Awards
 
   @demo123987  @Test001 @TestGoogle
   Scenario Outline: Gembook_OtherPortals_NavigationToNewPageOnClicking<desiredPage>
+    When User clicks on signIn Button
+    Then User enters the "username"
+    Then User enters the "password"
+    And User logins into the application
+    Then Verify user is logged into the application or not
+    When User navigates to tab "News Feeds"
     Given Check if Other Portals is present in side bar
     When Check if all sub items are present
     Then User clicks on the "<desiredPage>" menu item

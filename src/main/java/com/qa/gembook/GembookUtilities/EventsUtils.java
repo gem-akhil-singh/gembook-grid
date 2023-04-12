@@ -120,7 +120,7 @@ public class EventsUtils extends DriverAction {
      */
     // ------------------ Wait until the element is visible -------------------------
     public static void waitForElement(By locator, int duration) {
-        waitSec(120);
+     //   waitSec(120);
         WebDriverWait wait = new WebDriverWait(DriverManager.getWebDriver(), Duration.ofSeconds((long) duration));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
