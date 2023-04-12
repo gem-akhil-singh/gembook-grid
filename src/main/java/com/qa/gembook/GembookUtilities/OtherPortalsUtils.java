@@ -88,7 +88,8 @@ public class OtherPortalsUtils extends DriverAction {
      * @since 23rd Feb, 2023
      */
     public static String getsubItemsList() throws IOException {
-        return GembookUtils.readProperties("otherPortalsItems");
+       // return GembookUtils.readProperties("otherPortalsItems");
+        return null;
     }
 
     /**
