@@ -73,6 +73,7 @@ public class GembookUtils extends DriverAction {
             EventsUtils.waitForElement(Login_Locators.nextBtn, 10);
             click(Login_Locators.nextBtn, "Next Button");
             waitSec(5);
+            GemTestReporter.addTestStep("Login Test ", String.valueOf(browserWindows.size()),STATUS.PASS);
         } catch (Exception e) {
             GemTestReporter.addTestStep("Verify if Login window appears on the screen", "Login window does not appear on the screen", STATUS.FAIL, takeSnapShot());
             throw e;

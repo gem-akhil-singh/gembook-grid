@@ -1,12 +1,18 @@
 Feature: Gembook -> News Feed -> Awards
 
-  Background: User Login into the Gembook Application
+#  Background: User Login into the Gembook Application
+#    When User clicks on signIn Button
+#    Then User enters the "username"
+#    Then User enters the "password"
+#    And User logins into the application
+#    Then Verify user is logged into the application or not
+#    When User navigates to tab "News Feeds"
+
+
+    Scenario: Login Test
     When User clicks on signIn Button
     Then User enters the "username"
     Then User enters the "password"
-    And User logins into the application
-    Then Verify user is logged into the application or not
-    When User navigates to tab "News Feeds"
 
 
   @demo123987  @Test001
