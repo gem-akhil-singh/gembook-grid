@@ -15,6 +15,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,6 +26,8 @@ import java.util.List;
 import java.util.Properties;
 
 public class GembookUtils extends DriverAction {
+
+    Logger GembookUtilsLogger = LoggerFactory.getLogger(GembookUtils.class);
 
     /**
      * @author Deeksha Singh
@@ -47,11 +51,13 @@ public class GembookUtils extends DriverAction {
      * @author Rahul tagra
      * @since 17th Feb,2023
      */
+
     @Then("User enters the {string}")
     public void enterCredentials(String credentialType) throws IOException {
         try {
             List<String> browserWindows = new ArrayList<>(getWindowHandles());
-            System.out.println("Show Window Handles "+ browserWindows.size());// Get all browser windows
+          //  System.out.println("Show Window Handles "+ browserWindows.size());// Get all browser windows
+            GembookUtilsLogger.info("Show Window Handles "+ browserWindows.size());
             switchToWindow(browserWindows.get(0)); // Switch focus to 2nd browser window
             EventsUtils.waitForElement(Login_Locators.credentials(credentialType), 20);
             switch (credentialType) {
