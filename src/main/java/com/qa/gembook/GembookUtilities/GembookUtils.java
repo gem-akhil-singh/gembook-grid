@@ -50,7 +50,8 @@ public class GembookUtils extends DriverAction {
     @Then("User enters the {string}")
     public void enterCredentials(String credentialType) throws IOException {
         try {
-            List<String> browserWindows = new ArrayList<>(getWindowHandles()); // Get all browser windows
+            List<String> browserWindows = new ArrayList<>(getWindowHandles());
+            System.out.println("Show Window Handles "+ browserWindows.size());// Get all browser windows
             switchToWindow(browserWindows.get(0)); // Switch focus to 2nd browser window
             EventsUtils.waitForElement(Login_Locators.credentials(credentialType), 20);
             switch (credentialType) {
