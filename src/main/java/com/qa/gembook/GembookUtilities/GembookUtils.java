@@ -62,10 +62,10 @@ public class GembookUtils extends DriverAction {
             EventsUtils.waitForElement(Login_Locators.credentials(credentialType), 20);
             switch (credentialType) {
                 case "username":
-                    typeText(Login_Locators.credentials(credentialType), readProperties(credentialType)); // Enter Username
+                    typeText(Login_Locators.credentials(credentialType),"karan.thakur@geminisolutions.com"); // Enter Username
                     break;
                 case "password":
-                    typeText(Login_Locators.credentials(credentialType), "User enters the password", "Password Entered Successfully", readProperties(credentialType));
+                    typeText(Login_Locators.credentials(credentialType), "User enters the password", "Password Entered Successfully", "Gemini#123");
                     break;
                 default:
                     System.out.println("Please enter a valid Input");
