@@ -13,7 +13,7 @@
   "tagName": "@TestGoogle",
   "remoteDriverUrl" : "https://selenium-hub.geminisolutions.com/",
   "prod": {
-    "browserName": "grid",
+    "browserName": "chrome",
     "launchUrl": "https://gembook.geminisolutions.com/#/",
     "launchUrl1": "https://mymis.geminisolutions.com/",
     "browserTimeout": 100,
